@@ -6,37 +6,56 @@
 
     <style>
         body {
-            background: #0f172a;
+            background: linear-gradient(to right, #0f172a, #1e293b);
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 80px;
+            padding-top: 50px;
         }
 
         .card {
-            background: #1e293b;
-            width: 300px;
+            background: rgba(30, 41, 59, 0.9);
+            width: 320px;
             margin: auto;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.7);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
         }
 
         h1 {
             color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #38bdf8;
+        }
+
+        p {
+            margin: 10px 0;
         }
 
         button {
             background: #38bdf8;
             border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
+            padding: 12px 25px;
+            border-radius: 12px;
             cursor: pointer;
             font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
         }
 
         button:hover {
             background: #0ea5e9;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -44,10 +63,11 @@
 <body>
 
     <div class="card">
+        <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Profile Image">
         <h1>Hello 👋</h1>
         <p>I'm learning programming</p>
         <p>This is my first GitHub project</p>
-        <button onclick="alert('Welcome to my project!')">
+        <button onclick="alert('Welcome to my enhanced project!')">
             Click me
         </button>
     </div>
