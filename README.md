@@ -1,2 +1,3 @@
-# first-project
-My first project on GitHub
+Hi 👋  
+I'm learning programming.  
+This is my first GitHub project.
