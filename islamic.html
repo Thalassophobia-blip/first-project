@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تطبيق إسلامي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: rgba(30,41,59,0.9);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.7);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        button {
+            background: #38bdf8;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+            transform: scale(1.05);
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>تطبيق إسلامي تفاعلي</h1>
+
+    <!-- أذكار وأدعية -->
+    <div class="card">
+        <h2>أذكار وأدعية</h2>
+        <p id="dhikr">اضغط على الزر لعرض ذكر أو دعاء</p>
+        <button onclick="showDhikr()">عرض ذكر/دعاء</button>
+    </div>
+
+    <!-- مواقيت الصلاة -->
+    <div class="card">
+        <h2>مواقيت الصلاة</h2>
+        <p>الفجر: 05:00</p>
+        <p>الظهر: 12:30</p>
+        <p>العصر: 15:45</p>
+        <p>المغرب: 18:20</p>
+        <p>العشاء: 19:50</p>
+    </div>
+
+    <!-- معلومات إسلامية -->
+    <div class="card">
+        <h2>معلومة إسلامية</h2>
+        <p id="hadith">اضغط على الزر لعرض حديث أو نصيحة</p>
+        <button onclick="showHadith()">عرض حديث/نصيحة</button>
+    </div>
+
+    <script>
+        const dhikrList = [
+            "سبحان الله",
+            "الحمد لله",
+            "الله أكبر",
+            "لا إله إلا الله",
+            "اللهم صل على محمد"
+        ];
+
+        const hadithList = [
+            "من صلى عليّ صلاة صلّى الله عليه بها عشراً.",
+            "أحب الأعمال إلى الله سرور تدخله على مسلم.",
+            "إنما الأعمال بالنيات."
+        ];
+
+        function showDhikr() {
+            const index = Math.floor(Math.random() * dhikrList.length);
+            document.getElementById('dhikr').innerText = dhikrList[index];
+        }
+
+        function showHadith() {
+            const index = Math.floor(Math.random() * hadithList.length);
+            document.getElementById('hadith').innerText = hadithList[index];
+        }
+    </script>
+
+</body>
+  </html>
